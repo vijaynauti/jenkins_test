@@ -8,7 +8,7 @@ pipeline {
                 }
         }
         post {
-                always {
+                failure {
                         echo 'This is post build step'
                 }
         }

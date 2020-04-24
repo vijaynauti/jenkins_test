@@ -14,6 +14,9 @@ pipeline {
                         }
                 }
                 stage("step2") {
+                        when {
+                                environment name: "state", value: "test"
+                        }
                         options {
                                 timeout(time: 2, unit: "MINUTES")
                         }

@@ -18,6 +18,7 @@ node {
       if (isUnix()) {
          sh "'${mvnHome}/bin/mvn' -f api-gateway/pom.xml -Dmaven.test.failure.ignore clean package"
           sh "pwd"
+          sh "whoami"
       } else {
          bat(/"${mvnHome}\bin\mvn" -Dmaven.test.failure.ignore clean package/)
       }
